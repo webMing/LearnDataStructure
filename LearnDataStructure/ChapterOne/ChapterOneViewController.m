@@ -156,7 +156,6 @@ void bubbleSort(int list[],int lenth){
                 list[i] = list[i] - list[j];
             }
         }
-        
         /*交换两个数据
          A = A + B;
          B = A - B:
@@ -165,5 +164,23 @@ void bubbleSort(int list[],int lenth){
         
     }
 }
+
+
+
+// 迭代
+void printNumFun_1(int num) {
+    for (int i = 0; i < num; i++) {
+        printf("Current Num Value :%d",num);
+    }
+}
+// 递归
+void printNumFun_2(int num) {
+    // 当num足够大的时候内存爆掉
+    if(num) {
+        printNumFun_2(num - 1);
+        printf("Current Num Value :%d",num);
+    }
+}
+// 实验数据 num 1000,10000,100000,1000000 可以看下效果
 
 @end
