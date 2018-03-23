@@ -13,6 +13,7 @@
 #define MAXCOUNT 5
 #import "LineListViewController.h"
 
+
 @interface LineListViewController ()
 
 @end
@@ -24,12 +25,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    // 测试线性表
+    Ste_List _list = initLineList();
+    printf("return address :%p\n",_list);
+    for (int i = 0 ; i < MAXCOUNT ; i++ ) {
+        _list.data[i] = 0.0f;
+    }
+//    _list.data[MAXCOUNT] = {10.0f,0.0f,0.0f,0.0f,0.0f};
+//    List_point p = &(_list);
+    insertAtLast(&_list, 2.3);
+    insertAtLast(&_list, 32.3);
+    enumAllItems(&_list);
+    //free(&(_list));
+//    free((struct Ste_List*)(*m));
+//    printf("%p\n",p);
+    
 }
+
 #pragma mark- CreateUI
 
 #pragma mark- EventRespone
@@ -47,12 +66,16 @@
 typedef struct Ste_List {
     float data[MAXCOUNT];
     int last; //data数组中最后一个下标索引 last < MAXCOUNT
-}ste_list;
+}Ste_List;
 
+
+/*
 struct List {
     float value;
     int last ;
 };
+ */
+
 struct Ste_List prtL; //定义一个结构体;
 typedef struct Ste_List List; //定义创建“结构体”的快捷方式;
 typedef struct Ste_List *List_point; //创建指向结构体指针的快捷方式;
@@ -61,9 +84,12 @@ typedef struct Ste_List *List_point; //创建指向结构体指针的快捷方�
 
 List initLineList() {
     List_point ste_list;
-    ste_list = malloc(sizeof(ste_list));
+    ste_list = malloc(sizeof(List));
+//    ste_list->data = {0.0,0.0,0.0,0.0,0.0};
     ste_list->last = -1; //初始化为-1
+    printf("malloc address :%p\n",ste_list);
     return *ste_list;
+   
     /*
     另一种形式的初始化方法
     List* my_list;
@@ -141,5 +167,16 @@ bool deleteByIndex(List_point list,int index) {
     }else{
         return false;
     }
+}
+
+#pragma mark- 遍历所有元素
+void enumAllItems(List_point list) {
+    for (int i = 0 ; i <= list->last; i++) {
+        printf("value: %.2f",list->data[i]);
+    }
+}
+
+- (NSString*)description {
+    return @"This is Custom method!";
 }
 @end
