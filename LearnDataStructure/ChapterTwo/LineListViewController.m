@@ -29,21 +29,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
+//0x7ffee9533e20
+//0x7f8336f61000
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     // 测试线性表
-    Ste_List _list = initLineList();
-    printf("return address :%p\n",_list);
+    List _list = initLineList();
     for (int i = 0 ; i < MAXCOUNT ; i++ ) {
-        _list.data[i] = 0.0f;
+        _list.data[i] = 1;
     }
+    
 //    _list.data[MAXCOUNT] = {10.0f,0.0f,0.0f,0.0f,0.0f};
 //    List_point p = &(_list);
     insertAtLast(&_list, 2.3);
     insertAtLast(&_list, 32.3);
     enumAllItems(&_list);
-    //free(&(_list));
+    free(&(_list));
 //    free((struct Ste_List*)(*m));
 //    printf("%p\n",p);
     
@@ -64,11 +65,11 @@
 #pragma mark- 线性表数据结构
 
 typedef struct Ste_List {
-    float data[MAXCOUNT];
+    int data[MAXCOUNT];
     int last; //data数组中最后一个下标索引 last < MAXCOUNT
 }Ste_List;
 
-
+                
 /*
 struct List {
     float value;
@@ -87,7 +88,7 @@ List initLineList() {
     ste_list = malloc(sizeof(List));
 //    ste_list->data = {0.0,0.0,0.0,0.0,0.0};
     ste_list->last = -1; //初始化为-1
-    printf("malloc address :%p\n",ste_list);
+    //printf("malloc address :%p\n",ste_list);
     return *ste_list;
    
     /*
@@ -95,8 +96,20 @@ List initLineList() {
     List* my_list;
     my_list = malloc(sizeof(List));
     my_list->last = -1;
-    */
+     */
+ 
 }
+
+/*
+List_point initLineList() {
+    List_point ste_list;
+    ste_list = malloc(sizeof(List));
+    //    ste_list->data = {0.0,0.0,0.0,0.0,0.0};
+    ste_list->last = -1; //初始化为-1
+    printf("malloc address :%p\n",ste_list);
+    return ste_list;
+}
+*/
 
 #pragma mark- 给定一个Value查找在数组中的位置
 // 给定一个值找出来,这个值所在的位置
