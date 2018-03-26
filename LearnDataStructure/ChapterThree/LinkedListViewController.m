@@ -51,6 +51,17 @@ link_list_point initLinkedList(){
     link_point->value = 1;
     return link_point;
 }
+// 链表元素个数
+int link_list_cout(link_list_point link_point) {
+    if (link_point == NULL) return 0;
+    int count = 0;
+    link_list_point tem = link_point;
+    do {
+        count++;
+        tem = tem->next;
+    } while (tem->next != NULL);
+    return count;
+}
 //通过下标查找链表节点
 link_list_point searchNode(link_list_point link_point,int index) {
     if (index == 1) return link_point;
