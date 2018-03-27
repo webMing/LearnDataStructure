@@ -30,9 +30,34 @@
     [super didReceiveMemoryWarning];
 }
 
+//0x00007ffee13efe40 140732677422656
+//0x00006000000155b0 105553116353968
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    __block NSMutableString *a = [NSMutableString stringWithString:@"Tom"];
+//    NSMutableString *a = [NSMutableString stringWithString:@"Tom"];
+    NSLog(@"\n 定以前：------------------------------------\n\
+          a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &a);               //a在栈区
+    void (^foo)(void) = ^{
+        a.string = @"Jerry";
+        NSLog(@"\n block内部：------------------------------------\n\
+              a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &a);               //a在栈区
+        //a = [NSMutableString stringWithString:@"William"];
+        /*
+        当没有使用__block 块也会被拷贝到堆中,那么为什么不能改a值;
+        原因可能是此时此时a是被block捕获.当变量进入block就进入新的作用域;为了区别其他的作用域 所以不能修改;
+         */
+        NSLog(@"\n blockValue:%@",a);
+    };
+    foo();
+    NSLog(@"\n 定以后：------------------------------------\n\
+          a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &a);               //a在栈区
+    NSLog(@"\n 定义以后:%@",a);
+    
+    return;
     // 测试线性表
+    ste_list list = {{1,1,1,1,1},-1};
     ste_list_pointer list_pointer = initLineList();
 //    for (int i = 0 ; i < MAXCOUNT ; i++ ) {
 //        list_pointer->data[i] = 1;
@@ -103,6 +128,7 @@ ste_list_pointer  initLineList() {
      */
  
 }
+//0x00006000000048b0
 
 /*
 List_point initLineList() {
