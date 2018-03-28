@@ -24,16 +24,6 @@ typedef struct Link_list *link_list_point;
 #pragma mark- LifeCicle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    int a = 3;
-    int b = 4;
-    int *p = &a;
-    chage_point(p,&b);
-    printf("current value:%d\n",*p);
-}
-
-void chage_point(int *p,int *b) {
-    //*p = *b;
-    p = b;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,8 +46,7 @@ void chage_point(int *p,int *b) {
     if (searchNode(node1,index) != NULL) {
         printf("search_node_at_index:%d value:%d\n",index,searchNode(node1,index)->value);
     }
-    deleteNode(node1,1);
-    
+    node1 = deleteNode(node1,6);
     printNodeValue(node1); //注意这里压入栈中的值是:"之前node1的值"
 }
 
@@ -115,25 +104,24 @@ link_list_point searchNode(link_list_point link_point,int index) {
 }
 
 //通过下标删除链表节点(1 ....)
-bool deleteNode(link_list_point ori_link_point,int index) {
-    if (index < 1) return false;
+link_list_point deleteNode(link_list_point ori_link_point,int index) {
+    if (index < 1) return ori_link_point;
     //case : index ==1
     if (index == 1) {
         link_list_point tem = ori_link_point->next;
         free(ori_link_point);
-        ori_link_point = tem;
-        return true;
+        return tem;
     }
     //case : index !=1
     //index-1链表指针;
     link_list_point pre_link_node = searchNode(ori_link_point,index-1);
     //index链表指针
     link_list_point link_node = pre_link_node->next;
-    if (link_node == NULL) return true ; //越界
+    if (link_node == NULL) return ori_link_point ; //越界
     //链接
     pre_link_node->next = link_node->next;
     free(link_node);
-    return true;
+    return ori_link_point;
 }
 
 void printNodeValue(link_list_point point) {

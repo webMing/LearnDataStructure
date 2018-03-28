@@ -17,6 +17,7 @@
 		909C966C20610B3E0056A421 /* LearnDataStructureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 909C966B20610B3E0056A421 /* LearnDataStructureTests.m */; };
 		909C967720610B3E0056A421 /* LearnDataStructureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 909C967620610B3E0056A421 /* LearnDataStructureUITests.m */; };
 		909CF5AC2067F4F200BEC77D /* LinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5AB2067F4F200BEC77D /* LinkedListViewController.m */; };
+		909CF5B5206BC08500BEC77D /* DoubleLinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5B4206BC08500BEC77D /* DoubleLinkedListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		909C967820610B3E0056A421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909CF5AA2067F4F200BEC77D /* LinkedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListViewController.h; sourceTree = "<group>"; };
 		909CF5AB2067F4F200BEC77D /* LinkedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedListViewController.m; sourceTree = "<group>"; };
+		909CF5B3206BC08500BEC77D /* DoubleLinkedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleLinkedListViewController.h; sourceTree = "<group>"; };
+		909CF5B4206BC08500BEC77D /* DoubleLinkedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkedListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 		909C965120610B3E0056A421 /* LearnDataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				909CF5B2206BC04D00BEC77D /* ChapterFour */,
 				909CF5A92067F4AA00BEC77D /* ChapterThree */,
 				9037B7282062A20F00F78454 /* ChapterTwo */,
 				909C968520610BD90056A421 /* ChapterOne */,
@@ -172,6 +176,15 @@
 				909CF5AB2067F4F200BEC77D /* LinkedListViewController.m */,
 			);
 			path = ChapterThree;
+			sourceTree = "<group>";
+		};
+		909CF5B2206BC04D00BEC77D /* ChapterFour */ = {
+			isa = PBXGroup;
+			children = (
+				909CF5B3206BC08500BEC77D /* DoubleLinkedListViewController.h */,
+				909CF5B4206BC08500BEC77D /* DoubleLinkedListViewController.m */,
+			);
+			path = ChapterFour;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +322,7 @@
 			files = (
 				909C965720610B3E0056A421 /* ChapterOneViewController.m in Sources */,
 				909C966220610B3E0056A421 /* main.m in Sources */,
+				909CF5B5206BC08500BEC77D /* DoubleLinkedListViewController.m in Sources */,
 				9037B72B2062A22500F78454 /* LineListViewController.m in Sources */,
 				909C965420610B3E0056A421 /* AppDelegate.m in Sources */,
 				909CF5AC2067F4F200BEC77D /* LinkedListViewController.m in Sources */,
