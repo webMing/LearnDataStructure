@@ -18,6 +18,9 @@
 		909C967720610B3E0056A421 /* LearnDataStructureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 909C967620610B3E0056A421 /* LearnDataStructureUITests.m */; };
 		909CF5AC2067F4F200BEC77D /* LinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5AB2067F4F200BEC77D /* LinkedListViewController.m */; };
 		909CF5B5206BC08500BEC77D /* DoubleLinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5B4206BC08500BEC77D /* DoubleLinkedListViewController.m */; };
+		909CF5B8206BD1A800BEC77D /* DoubleLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5B7206BD1A800BEC77D /* DoubleLinkedList.c */; };
+		909CF5BB206BD71500BEC77D /* LinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5BA206BD71500BEC77D /* LinkedList.c */; };
+		909CF5BE206BDD3100BEC77D /* linkedCommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 909CF5BD206BDD3100BEC77D /* linkedCommon.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		909CF5AB2067F4F200BEC77D /* LinkedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedListViewController.m; sourceTree = "<group>"; };
 		909CF5B3206BC08500BEC77D /* DoubleLinkedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleLinkedListViewController.h; sourceTree = "<group>"; };
 		909CF5B4206BC08500BEC77D /* DoubleLinkedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkedListViewController.m; sourceTree = "<group>"; };
+		909CF5B6206BD1A800BEC77D /* DoubleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleLinkedList.h; sourceTree = "<group>"; };
+		909CF5B7206BD1A800BEC77D /* DoubleLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DoubleLinkedList.c; sourceTree = "<group>"; };
+		909CF5B9206BD71500BEC77D /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		909CF5BA206BD71500BEC77D /* LinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkedList.c; sourceTree = "<group>"; };
+		909CF5BC206BDD3100BEC77D /* linkedCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linkedCommon.h; sourceTree = "<group>"; };
+		909CF5BD206BDD3100BEC77D /* linkedCommon.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linkedCommon.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +183,8 @@
 			children = (
 				909CF5AA2067F4F200BEC77D /* LinkedListViewController.h */,
 				909CF5AB2067F4F200BEC77D /* LinkedListViewController.m */,
+				909CF5B9206BD71500BEC77D /* LinkedList.h */,
+				909CF5BA206BD71500BEC77D /* LinkedList.c */,
 			);
 			path = ChapterThree;
 			sourceTree = "<group>";
@@ -183,6 +194,10 @@
 			children = (
 				909CF5B3206BC08500BEC77D /* DoubleLinkedListViewController.h */,
 				909CF5B4206BC08500BEC77D /* DoubleLinkedListViewController.m */,
+				909CF5B6206BD1A800BEC77D /* DoubleLinkedList.h */,
+				909CF5B7206BD1A800BEC77D /* DoubleLinkedList.c */,
+				909CF5BC206BDD3100BEC77D /* linkedCommon.h */,
+				909CF5BD206BDD3100BEC77D /* linkedCommon.c */,
 			);
 			path = ChapterFour;
 			sourceTree = "<group>";
@@ -320,9 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909CF5BB206BD71500BEC77D /* LinkedList.c in Sources */,
 				909C965720610B3E0056A421 /* ChapterOneViewController.m in Sources */,
+				909CF5B8206BD1A800BEC77D /* DoubleLinkedList.c in Sources */,
 				909C966220610B3E0056A421 /* main.m in Sources */,
 				909CF5B5206BC08500BEC77D /* DoubleLinkedListViewController.m in Sources */,
+				909CF5BE206BDD3100BEC77D /* linkedCommon.c in Sources */,
 				9037B72B2062A22500F78454 /* LineListViewController.m in Sources */,
 				909C965420610B3E0056A421 /* AppDelegate.m in Sources */,
 				909CF5AC2067F4F200BEC77D /* LinkedListViewController.m in Sources */,
