@@ -23,6 +23,29 @@
     [super viewDidAppear:animated];
     //link_node_p n1 = double_init_Link_node(1);
     //print_double_link_node(n1);
+    /*
+    int q,w,r; q=w=r=0;
+    int aa = 0x7FFFFFFF;
+    short a = 0x7FFF;
+    char b = 0x7F;
+    short c = a + b;
+    printf("%d",a + b);
+     */
+    //unsigned int a = 2147483647*2+1;//4294967295;
+    unsigned int b = 2147483647;
+     unsigned long c = 18446744073709551414;
+    long long f = b + c;
+    printf("test code:%lu\n",sizeof(f));
+    printf("size of char is %lu bytes \n",sizeof(char));
+    printf("size of short is %lu bytes \n",sizeof(short));
+    printf("size of int is %lu bytes \n",sizeof(int));
+    printf("size of unsigned int is %lu bytes \n",sizeof(unsigned int));
+    printf("size of long is %lu bytes \n",sizeof(long));
+    printf("size of unsigned long is %lu bytes \n",sizeof(unsigned long));
+    printf("size of float is %lu bytes \n",sizeof(float));
+    printf("size of double is %lu bytes \n",sizeof(double));
+    printf("size of long double is %lu bytes \n",sizeof(long double));
+    
 }
 
 #pragma mark- CreateUI
