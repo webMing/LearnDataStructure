@@ -9,6 +9,7 @@
 /*
  之前的想法是把 打印函数链表的函数、初始化函数、内存释放函数 抽离出来；
  因为之前的代码已经写好，为了对比之前的代码 并没有修改;
+ static int a = 3;会为每一个引入的该文件源文件创建本地的a变量
  */
 #ifndef linkedCommon_h
 #define linkedCommon_h
