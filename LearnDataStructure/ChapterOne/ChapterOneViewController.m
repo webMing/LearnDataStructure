@@ -142,7 +142,6 @@ void selectionSort(int list[],int lenth) {
 void bubbleSort(int list[],int lenth){
     for (int i = 0; i < lenth; i++) {
         //从index到lenth-1中找到最大的一个数字的索引
-        int swapValue = 0;
         for (int j = i + 1; j < lenth; j++) {
             if (list[i] > list[j]) {
                 /*

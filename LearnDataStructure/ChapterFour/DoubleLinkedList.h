@@ -19,12 +19,13 @@ struct Link_node {
     struct Link_node *next;
 };
 
+typedef struct Link_node* link_node_p;
+
 #warning 如果直接写 int a 会报错;\
 改成 extern int a 就可以了 \
-.h（头文件）不允许定义变量
+.h（头文件）不允许定义变量 \
+static int a 的确可以避免符号冲突,但是会在引用它的每一源文件中创建一个独立的变量a
 //extern int a ;
-
-typedef struct Link_node* link_node_p;
 
 // 单链表初始化
 extern link_node_p double_init_Link_node(int value);
