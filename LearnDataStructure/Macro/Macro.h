@@ -46,5 +46,27 @@
 #define STMIN(A,B)    ({ __typeof__(A) __a = (A); __typeof__(B) __b = (B); __a < __b ? __a : __b; })
 
 
+#define FOO(A) (A++)
+
 #define STE_CC(V) { printf("\n"); printf("V:%d \n",V); }
+
+#define STLOG(format,...) {  \
+        const char* path = [[[NSString stringWithUTF8String:__FILE__]lastPathComponent] UTF8String];   \
+        const char* fun = [[NSString stringWithFormat:@"%s",__FUNCTION__] UTF8String]; \
+        fprintf(stderr,"\nFile:%s \nFun:%s\n",path,fun);  \
+        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,__VA_ARGS__] UTF8String]);\
+}
+
+//另一种更好的写法
+#define STLOG1(format,...) \
+    do{ \
+        const char* path = [[[NSString stringWithUTF8String:__FILE__]lastPathComponent] UTF8String]; \
+        const char* fun = [[NSString stringWithFormat:@"%s",__FUNCTION__] UTF8String]; \
+        fprintf(stderr,"\nFile:%s \nFun:%s\n",path,fun);  \
+        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,__VA_ARGS__] UTF8String]);\
+    }while(0)
+
+
+#define FOO1(A) (A)++; printf("\n%d\n",A); //解决方法是添加{} 最好的添加do{}while(0)
+
 #endif /* Macro_h */
