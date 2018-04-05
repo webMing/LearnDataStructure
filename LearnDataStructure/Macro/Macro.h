@@ -64,9 +64,11 @@
         const char* fun = [[NSString stringWithFormat:@"%s",__FUNCTION__] UTF8String]; \
         fprintf(stderr,"\nFile:%s \nFun:%s\n",path,fun);  \
         fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,__VA_ARGS__] UTF8String]);\
-    }while(0)
+}while(0);
 
 
 #define FOO1(A) (A)++; printf("\n%d\n",A); //解决方法是添加{} 最好的添加do{}while(0)
+
+#define CU_PRINT(A) do{printf("=="#A"\n");}while(0);
 
 #endif /* Macro_h */

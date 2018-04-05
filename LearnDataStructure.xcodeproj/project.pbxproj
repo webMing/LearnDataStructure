@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9037B72B2062A22500F78454 /* LineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9037B72A2062A22500F78454 /* LineListViewController.m */; };
 		904BEDCC2073C1DB005DD881 /* AppDelegate+Ste_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 904BEDCB2073C1DB005DD881 /* AppDelegate+Ste_Test.m */; };
+		904D9F882075D82C00A679C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 904D9F872075D82C00A679C1 /* LICENSE */; };
 		909C965420610B3E0056A421 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 909C965320610B3E0056A421 /* AppDelegate.m */; };
 		909C965720610B3E0056A421 /* ChapterOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909C965620610B3E0056A421 /* ChapterOneViewController.m */; };
 		909C965A20610B3E0056A421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909C965820610B3E0056A421 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		904BEDC92073BE33005DD881 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		904BEDCA2073C1DB005DD881 /* AppDelegate+Ste_Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Ste_Test.h"; sourceTree = "<group>"; };
 		904BEDCB2073C1DB005DD881 /* AppDelegate+Ste_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Ste_Test.m"; sourceTree = "<group>"; };
+		904D9F872075D82C00A679C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		909C964F20610B3E0056A421 /* LearnDataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnDataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909C965220610B3E0056A421 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		909C965320610B3E0056A421 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		909C964620610B3E0056A421 = {
 			isa = PBXGroup;
 			children = (
+				904D9F872075D82C00A679C1 /* LICENSE */,
 				909C965120610B3E0056A421 /* LearnDataStructure */,
 				909C966A20610B3E0056A421 /* LearnDataStructureTests */,
 				909C967520610B3E0056A421 /* LearnDataStructureUITests */,
@@ -325,6 +328,7 @@
 			files = (
 				909C965F20610B3E0056A421 /* LaunchScreen.storyboard in Resources */,
 				909C965C20610B3E0056A421 /* Assets.xcassets in Resources */,
+				904D9F882075D82C00A679C1 /* LICENSE in Resources */,
 				909C965A20610B3E0056A421 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

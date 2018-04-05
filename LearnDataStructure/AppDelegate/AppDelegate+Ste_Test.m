@@ -9,11 +9,23 @@
 #import "AppDelegate+Ste_Test.h"
 #import "Macro.h"
 #import <objc/runtime.h>
+#import <TargetConditionals.h>
 
+#if TARGET_OS_IPHONE
+    #define STE_IPHONE_FLAG 1
+#elif TARGET_OS_OSX
+    #define STE_IPHONE_FLAG 0;
+#endif
 
 @implementation AppDelegate (Ste_Test)
+
 - (void)test_macro {
     
+    CU_PRINT(1);
+    if (YES)
+        CU_PRINT(1)
+    else
+         CU_PRINT(1)
     /*
     int __a = 1;
     int __b = 2;
@@ -41,11 +53,13 @@
     int te_reult =  FOO(te_var) == 2 ? FOO(te_var) : 2;
     */
     
+    /*
     int auto_add = 1;
     if(YES)
         FOO1(auto_add)
     else
         // do somthing;
+     */
         
 }
 @end
