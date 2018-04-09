@@ -21,11 +21,6 @@
 
 - (void)test_macro {
     
-    CU_PRINT(1);
-    if (YES)
-        CU_PRINT(1)
-    else
-         CU_PRINT(1)
     /*
     int __a = 1;
     int __b = 2;

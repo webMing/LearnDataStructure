@@ -54,7 +54,7 @@
         const char* path = [[[NSString stringWithUTF8String:__FILE__]lastPathComponent] UTF8String];   \
         const char* fun = [[NSString stringWithFormat:@"%s",__FUNCTION__] UTF8String]; \
         fprintf(stderr,"\nFile:%s \nFun:%s\n",path,fun);  \
-        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,__VA_ARGS__] UTF8String]);\
+        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,##__VA_ARGS__] UTF8String]);\
 }
 
 //另一种更好的写法
@@ -63,12 +63,31 @@
         const char* path = [[[NSString stringWithUTF8String:__FILE__]lastPathComponent] UTF8String]; \
         const char* fun = [[NSString stringWithFormat:@"%s",__FUNCTION__] UTF8String]; \
         fprintf(stderr,"\nFile:%s \nFun:%s\n",path,fun);  \
-        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,__VA_ARGS__] UTF8String]);\
+        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,##__VA_ARGS__] UTF8String]);\
 }while(0);
 
+#define STETEST(format,...) \
+    do{\
+    /*Historically, GNU CPP has also had another extension to handle the trailing comma: the ‘##’ token paste operator has a special meaning when placed between a comma and a variable argument.*/\
+    fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,##__VA_ARGS__] UTF8String]);\
+    }while(0)
+
+//可变参数宏的另一种定义方式（这种方式更好一些）
+#define STETEST1(format,args...) \
+   do{\
+        fprintf(stderr,"%s\n",[[NSString stringWithFormat:format,##args] UTF8String]);\
+   }while(0)
+
+//不太主流的方式
+#define STEPR(args) {printf("DEBUG:");printf(args.UTF8String);}
 
 #define FOO1(A) (A)++; printf("\n%d\n",A); //解决方法是添加{} 最好的添加do{}while(0)
 
 #define CU_PRINT(A) do{printf("=="#A"\n");}while(0);
+
+// 下面这些宏相同吗？
+#define FOUR (2+2)
+#define FOUR    (2 + 2)
+ 
 
 #endif /* Macro_h */

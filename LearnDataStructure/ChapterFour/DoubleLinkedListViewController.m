@@ -8,6 +8,7 @@
 
 #import "DoubleLinkedListViewController.h"
 #include "DoubleLinkedList.h"
+#import "Macro.h"
 
 @interface DoubleLinkedListViewController ()
 
@@ -21,6 +22,10 @@
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    //STLOG(@"this is custom world~");
+    //STLOG1(@"this is printf world!%@",@"☺T我的世界HOS");
+    return;
     link_node_p n1 = double_init_Link_node(1);
     double_link_add_node(n1, 2);
     double_link_add_node(n1, 3);
@@ -74,7 +79,6 @@
 #pragma mark- GetterAndSetter
 
 #pragma mark- PrivateMethod
-
 
 
 @end
