@@ -19,6 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self test_macro];
     // Override point for customization after application launch.
+    // 添加unsigned char的类型
+    unsigned char a = 150;
+    int b = 900;
+    int c = b/a;
+    printf("b/a=%d\n",b/a);
+    printf("c:%d\n",c);
     return YES;
 }
 
